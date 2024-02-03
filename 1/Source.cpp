@@ -34,7 +34,7 @@ int main()
 	string fio = v[1][0], comp = v[1][1];
 	f2 << "ScientistName" << "-" << "date" << '\n';
 	f2 << v[1][2] << "-" << v[0][0] << '\n';
-	for (int i = 2; i <= 500; i++) {
+	for (int i = 2; i <= 500; i++) { 
 		if (comp != v[i][1]) {
 			f2 << v[i][2] << "-" << v[i][0] << '\n';
 			comp = v[i][1];
