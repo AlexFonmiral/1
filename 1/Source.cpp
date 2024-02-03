@@ -31,16 +31,17 @@ int main()
 	cout << "Разработчиками Аллопуринола были такие люди:" << endl;
 	f2.open("scientist_origin.txt");
 	sort(v.begin(), v.end());
-	string fio = v[1][0], comp = v[1][1];
+	string fio = v[1][0]; int comp = 0;
 	f2 << "ScientistName" << "-" << "date" << '\n';
-	f2 << v[1][2] << "-" << v[0][0] << '\n';
+	//f2 << v[1][2] << "-" << v[0][0] << '\n';
 	for (int i = 2; i <= 500; i++) { 
-		if (comp != v[i][1]) {
+		if (v[i][1] == "Аллопуринол" && comp == 1) {
+			cout << v[i][2] << "-" << v[i][0] << '\n';
+		}
+		if (v[i][1]=="Аллопуринол" && comp==0) {
 			f2 << v[i][2] << "-" << v[i][0] << '\n';
-			comp = v[i][1];
+			comp = 1;
 		}
-		else {
-		cout<< v[i][2] << "-" << v[i][0] << '\n';
-		}
+		
 	}
  }
